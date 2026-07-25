@@ -1,0 +1,9 @@
+[[main]]
+name = "主页"
+pageRef = "/"
+weight = 10
+
+[[main]]
+name = "油管"
+url = "https://www.youtube.com/@Forestson"
+weight = 20
