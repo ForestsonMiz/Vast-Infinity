@@ -2,3 +2,7 @@ baseURL = 'https://vastinfinity.org/'
 locale = 'en-us'
 title = 'The Worldbuilding and Stories of Vast Infinity'
 theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
