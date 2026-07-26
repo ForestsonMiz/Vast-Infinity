@@ -15,13 +15,17 @@
     {{- $post_class = printf "page-%s" .ContentBaseName -}}
   {{- end -}}
 
+
   <article class="{{ $post_class }} flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
     <header class="mt4 w-100">
+      
       {{- partials.Include "hook.html" ( dict "hook" "article/section-link"  "context" . ) -}}
       {{- partials.IncludeCached "social/share.html" . . -}}
+
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
+
       {{ with .Params.author | compare.Default .Site.Params.author }}
       <p class="tracked">
         {{- if compare.Eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
@@ -56,18 +60,22 @@
       {{- partials.Include "hook.html" (dict "hook" "content-after" "context" .) -}}
       {{- partials.Include "categories.html" . -}}
       {{- partials.Include "tags.html" . -}}
+
       {{ if .Site.Config.Services.Disqus.Shortname }}
       <div class="mt6 instapaper_ignoref">
         {{/* former internal template */}}
         {{ partials.Include "disqus.html" . }}
       </div>
       {{ end }}
+
       {{ if .Site.Params.commentoEnable }}
       <div class="mt6 instapaper_ignoref">
         {{- partials.Include "commento.html" . -}}
       </div>
       {{ end }}
+
     </div>
+
     {{- if $needs_aside -}}
     <aside class="w-30-l mt6-l">
       {{- partials.Include "menu-contextual.html" . -}}

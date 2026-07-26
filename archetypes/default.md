@@ -1,5 +1,5 @@
 +++
-date = '{{ .Date }}'
-draft = true
+lastmod = '{{ .Date }}'
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+summary = ''
 +++

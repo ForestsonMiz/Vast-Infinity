@@ -5,8 +5,11 @@
   </article>
 
   <section class="pa3 pa4-ns w-100 w-70-ns center">
+    
     {{ range .Sections.ByWeight }}
-      <article class="mb4">
+      
+    <article class="mb4">
+      
         <h2 class="f3">
           <a class="link black dim" href="{{ .RelPermalink }}">
             {{ .LinkTitle }}
@@ -16,8 +19,10 @@
         {{ with .Description }}
           <p class="mid-gray">{{ . }}</p>
         {{ end }}
+      
       </article>
     {{ end }}
+  
   </section>
 
 {{ end }}
