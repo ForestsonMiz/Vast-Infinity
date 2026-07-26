@@ -1,6 +1,5 @@
 +++
-date = '2026-07-24'
-draft = false
+lastmod = '2026-07-24'
 title = 'My First Post'
 +++
 

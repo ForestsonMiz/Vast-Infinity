@@ -1,6 +1,5 @@
 +++
-date = '2026-07-25'
-draft = false
+lastmod = '2026-07-25'
 title = '第一个动态'
 +++
 
